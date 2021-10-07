@@ -22,5 +22,6 @@ jobs:
         node-version: 12.21.0
         cache: 'npm'
     - run: npm i pm2 -g
+    - run: npm run build
     - run: npm run ci
     - run: npm test

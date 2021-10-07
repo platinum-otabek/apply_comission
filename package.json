@@ -7,7 +7,8 @@
         "start": "nodemon server.js",
         "test": "mocha --timeout 60000",
         "dev": "pm2 start server.js",
-        "ci": "pm2 start server.js"
+        "ci": "pm2 start server.js",
+        "build": "npm install"
     },
     "keywords": [],
     "author": "",
