@@ -1,0 +1,76 @@
+{
+  "ActionsCreate": {
+    "properties": {
+      "title": {
+        "type": "object",
+        "properties": {
+          "uz": {
+            "type": "string"
+          },
+          "uz_kr": {
+            "type": "string"
+          },
+          "en": {
+            "type": "string"
+          },
+          "ru": {
+            "type": "string"
+          }
+        }
+      },
+      "promocode": {
+        "type": "number",
+        "required": true
+      },
+      "sum": {
+        "type": "number",
+        "required": true
+      }
+    }
+  },
+  "ActionsUpdate": {
+    "properties": {
+      "title": {
+        "type": "object",
+        "properties": {
+          "uz": {
+            "type": "string"
+          },
+          "uz_kr": {
+            "type": "string"
+          },
+          "en": {
+            "type": "string"
+          },
+          "ru": {
+            "type": "string"
+          }
+        }
+      },
+      "promocode": {
+        "type": "number",
+        "required": true
+      },
+      "sum": {
+        "type": "number",
+        "required": true
+      }
+    }
+  },
+  "ActionsParticipateUsers": {
+    "properties": {
+      "promocode": {
+        "type": "number",
+        "required": true
+      },
+      "type": {
+        "type": "string",
+        "required": true
+      },
+      "user": {
+        "type": "string",
+        "required": true
+      }
+    }
+  }
+}

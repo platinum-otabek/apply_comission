@@ -1,0 +1,48 @@
+{
+  "/api/rate/": {
+
+    "post": {
+      "description": "Rate qo'shish.",
+      "tags": [
+        "Rates"
+      ],
+      "parameters": [
+        {
+          "in": "body",
+          "name": "Body",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/RateCreate"
+          }
+        }
+      ],
+      "responses": {
+        "201": {
+          "description": "OK"
+        }
+      }
+    }
+  },
+  "/api/rate/{user_id}": {
+    "get": {
+      "description": "Rate ma'lumotlarini olish(user_id)",
+      "tags": [
+        "Rates"
+      ],
+      "parameters": [
+        {
+          "in": "path",
+          "name": "user_id",
+          "description": "user IDsi",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "OK"
+        }
+      }
+    }
+  }
+}

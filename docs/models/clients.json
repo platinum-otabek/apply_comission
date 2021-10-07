@@ -1,0 +1,113 @@
+{
+  "ClientCreate": {
+    "properties": {
+      "name": {
+        "type": "string",
+        "required": true
+      },
+      "phone": {
+        "type": "string",
+        "required": true
+      },
+      "password": {
+        "type": "string",
+        "required": true
+      },
+      "pic": {
+        "type": "string"
+      },
+      "location": {
+        "type": "object",
+        "properties": {
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "name": "lat",
+              "type": "number"
+            }
+          }
+        }
+      },
+      "promocode": {
+        "type": "number"
+      },
+      "lang": {
+        "type": "string",
+        "required": true
+      }
+    }
+  },
+  "ClientResetPassword": {
+    "properties": {
+      "phone": {
+        "type": "string",
+        "required": true
+      },
+      "password": {
+        "type": "string",
+        "required": true
+      }
+    }
+  },
+  "ClientUpdate": {
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "phone": {
+        "type": "string"
+      },
+      "location": {
+        "type": "object",
+        "properties": {
+          "long": {
+            "type": "number"
+          },
+          "latt": {
+            "type": "number"
+          }
+        }
+      },
+      "lang": {
+        "type": "string",
+        "required": true
+      }
+    }
+  },
+  "ClientGetByPhone": {
+    "properties": {
+      "phone": {
+        "type": "string",
+        "required": true
+      }
+    }
+  },
+  "ClientUserPatch": {
+    "properties": {
+      "method": {
+        "type": "string",
+        "required": true
+      },
+      "user_id": {
+        "type": "string",
+        "required": true
+      },
+      "client_id": {
+        "type": "string",
+        "required": true
+      }
+    }
+  },
+  "ClientUpdatePassword": {
+    "properties": {
+      "oldPassword": {
+        "type": "string",
+        "required": true
+      },
+      "newPassword": {
+        "type": "string",
+        "required": true
+      }
+    }
+  }
+}

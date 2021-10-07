@@ -1,0 +1,120 @@
+{
+  "ServiceCreate": {
+    "properties": {
+      "title": {
+        "type": "object",
+          "properties": {
+            "uz": {
+              "type": "string"
+            },
+            "uz_kr": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            },
+            "ru": {
+              "type": "string"
+            }
+          }
+
+      },
+      "price": {
+        "type": "number",
+        "required": true
+      },
+      "description": {
+        "type": "object",
+
+          "properties": {
+            "uz": {
+              "type": "string"
+            },
+            "uz_kr": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            },
+            "ru": {
+              "type": "string"
+            }
+          }
+        },
+      "deadline": {
+        "type": "number"
+      },
+      "top": {
+        "type": "number",
+        "default": 0
+      },
+      "call": {
+        "type": "number",
+        "default": 0
+      },
+      "post": {
+        "type": "number",
+        "default": 0
+      }
+    }
+  },
+  "ServiceUpdate": {
+    "properties": {
+      "title": {
+        "type": "object",
+          "properties": {
+            "uz": {
+              "type": "string"
+            },
+            "uz_kr": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            },
+            "ru": {
+              "type": "string"
+            }
+          }
+
+      },
+      "price": {
+        "type": "number",
+        "required": true
+      },
+      "description": {
+        "type": "object",
+
+          "properties": {
+            "uz": {
+              "type": "string"
+            },
+            "uz_kr": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            },
+            "ru": {
+              "type": "string"
+            }
+          }
+        },
+      "deadline": {
+        "type": "number"
+      },
+      "top": {
+        "type": "number",
+        "default": 0
+      },
+      "call": {
+        "type": "number",
+        "default": 0
+      },
+      "post": {
+        "type": "number",
+        "default": 0
+      }
+    }
+  }
+}

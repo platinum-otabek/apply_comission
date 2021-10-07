@@ -1,0 +1,60 @@
+{
+  "JobCreate": {
+    "properties": {
+      "title": {
+        "type": "object",
+        "properties": {
+          "uz": {
+            "type": "string"
+          },
+          "uz_kr": {
+            "type": "string"
+          },
+          "en": {
+            "type": "string"
+          },
+          "ru": {
+            "type": "string"
+          }
+        }
+      },
+      "category_job": {
+        "type": "string",
+        "required": true
+      },
+      "pic": {
+        "type": "string",
+        "required": true
+      }
+    }
+  },
+  "JobUpdate": {
+    "properties": {
+      "title": {
+        "type": "object",
+        "properties": {
+          "uz": {
+            "type": "string"
+          },
+          "uz_kr": {
+            "type": "string"
+          },
+          "en": {
+            "type": "string"
+          },
+          "ru": {
+            "type": "string"
+          }
+        }
+      },
+      "category_job": {
+        "type": "string",
+        "required": true
+      },
+      "pic": {
+        "type": "string",
+        "required": true
+      }
+    }
+  }
+}

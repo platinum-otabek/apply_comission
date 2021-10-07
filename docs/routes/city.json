@@ -1,0 +1,85 @@
+{
+    "/api/city/": {
+        "get": {
+            "description": "Barcha shaharlarni olish.",
+            "tags": ["City"],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "post": {
+            "description": "Shahar qo'shish.",
+            "tags": [
+                "City"
+            ],
+            "parameters": [
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/CityCreate"
+                    }
+                }
+            ],
+            "responses": {
+                "201": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/city/{id}": {
+        "patch": {
+            "description": "Shahar  ma'lumotlarini o'zgartirish",
+            "tags": [
+                "City"
+            ],
+
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "City IDsi",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/CityUpdate"
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "delete": {
+            "description": "Shaharni o'chirish",
+            "tags": [
+                "City"
+            ],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "City IDsi",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "204": {
+                    "description": "OK"
+                }
+            }
+        }
+    }
+}

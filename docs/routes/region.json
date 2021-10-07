@@ -1,0 +1,85 @@
+{
+    "/api/region/": {
+        "get": {
+            "description": "Barcha tumanlarni olish.",
+            "tags": ["Region"],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "post": {
+            "description": "Tuman qo'shish.",
+            "tags": [
+                "Region"
+            ],
+            "parameters": [
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/RegionCreate"
+                    }
+                }
+            ],
+            "responses": {
+                "201": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/region/{id}": {
+        "patch": {
+            "description": "Tuman  ma'lumotlarini o'zgartirish",
+            "tags": [
+                "Region"
+            ],
+
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Region IDsi",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/RegionUpdate"
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "delete": {
+            "description": "Tumannini o'chirish",
+            "tags": [
+                "Region"
+            ],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Tuman IDsi",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "204": {
+                    "description": "OK"
+                }
+            }
+        }
+    }
+}

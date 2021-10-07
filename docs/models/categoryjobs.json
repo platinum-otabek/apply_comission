@@ -1,0 +1,55 @@
+{
+  "CategoryJobCreate": {
+    "properties": {
+      "title": {
+        "type": "object",
+
+          "properties": {
+            "uz": {
+              "type": "string"
+            },
+            "uz_kr": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            },
+            "ru": {
+              "type": "string"
+            }
+          }
+        }
+      ,
+      "pic": {
+        "type": "string",
+        "required": true
+      }
+    }
+  },
+  "CategoryJobUpdate": {
+    "properties": {
+      "title": {
+        "type": "object",
+
+          "properties": {
+            "uz": {
+              "type": "string"
+            },
+            "uz_kr": {
+              "type": "string"
+            },
+            "en": {
+              "type": "string"
+            },
+            "ru": {
+              "type": "string"
+            }
+          }
+        },
+       "pic": {
+                "type": "string",
+                "required": true
+            }
+    }
+  }
+}

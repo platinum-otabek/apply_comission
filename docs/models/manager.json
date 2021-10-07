@@ -1,0 +1,79 @@
+{
+  "ManagerCreate": {
+    "properties": {
+      "fullName": {
+        "type": "string",
+        "required": true
+      },
+      "phone": {
+        "type": "string",
+        "required": true
+      },
+      "city": {
+        "type": "string",
+        "required": true
+      },
+      "gender": {
+        "type": "boolean",
+        "required": true
+      },
+      "role": {
+        "type": "string",
+        "enum": "Bosh manager, manager",
+        "required": true
+      },
+      "login": {
+        "type": "string",
+        "required": true
+      },
+      "password": {
+        "type": "string",
+        "required": true
+      },
+      "promocode": {
+        "type": "number"
+      }
+    }
+  },
+  "ManagerUpdate": {
+    "properties": {
+      "fullName": {
+        "type": "string"
+      },
+      "phone": {
+        "type": "string"
+      },
+      "city": {
+        "type": "string"
+      },
+
+      "password": {
+        "type": "string"
+      }
+    }
+  },
+  "ManagerLogin": {
+    "properties": {
+      "phone": {
+        "type": "string",
+        "required": true
+      },
+      "password": {
+        "type": "string",
+        "required": true
+      }
+    }
+  },
+  "ManagerGetBetween2Date": {
+    "properties": {
+      "to": {
+        "type": "string",
+        "required": true
+      },
+      "from": {
+        "type": "string",
+        "required": true
+      }
+    }
+  }
+}

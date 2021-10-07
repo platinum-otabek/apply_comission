@@ -1,0 +1,86 @@
+{
+  "/registerNewCustomer": {
+    "post": {
+      "description": "Register new customer",
+      "tags": [
+        "Customer"
+      ],
+      "parameters": [
+        {
+          "in": "body",
+          "name": "Body",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/CustomerCreate"
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "OK"
+        }
+      }
+    }
+  },
+  "/getCustomerImage": {
+    "post": {
+      "description": "Get customer image",
+      "tags": [
+        "Customer"
+      ],
+      "parameters": [
+        {
+          "in": "header",
+          "name": "user_token",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/GetCustomerImage"
+          }
+        },
+        {
+          "in": "formData",
+          "type": "file",
+          "name": "image",
+          "required": true
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "OK"
+        }
+      }
+    }
+
+  },
+  "/imageMakeGrayscale": {
+    "post": {
+      "description": "Get customer image",
+      "tags": [
+        "Customer"
+      ],
+      "parameters": [
+        {
+          "in": "body",
+          "name": "image_srv_path",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/ImageMakeGrayScale"
+          }
+        },
+        {
+          "in": "header",
+          "name": "user_token",
+          "required": true,
+          "schema": {
+            "$ref": "#/definitions/GetCustomerImage"
+          }
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "OK"
+        }
+      }
+    }
+  }
+}

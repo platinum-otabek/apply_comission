@@ -1,0 +1,98 @@
+{
+    "/api/intros/": {
+        "post": {
+            "description": "Intro qo'shish.",
+            "tags": [
+                "Intros"
+            ],
+            "parameters": [
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/IntroCreate"
+                    }
+                }
+            ],
+            "responses": {
+                "201": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/intros/{id}": {
+        "patch": {
+            "description": "Intro  ma'lumotlarini o'zgartirish",
+            "tags": [
+                "Intros"
+            ],
+
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Intro IDsi",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/IntroUpdate"
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "delete": {
+            "description": "Introni o'chirish",
+            "tags": [
+                "Intros"
+            ],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Intro IDsi",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "204": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/intros/lang/{lang}": {
+        "get": {
+            "description": "Intro olish",
+            "tags": [
+                "Intros"
+            ],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "lang",
+                    "description": "Intro tili",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Chowis test Docs",
+    "description": "Chowis tesd api"
+  },
+  "host": "localhost:4000",
+  "schemes": [
+    "http",
+    "https"
+  ]
+}

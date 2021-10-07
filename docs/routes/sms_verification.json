@@ -1,0 +1,45 @@
+{
+    "/api/smsverify/receive": {
+        "post": {
+            "description": "Sms Jo`natish",
+            "tags": ["SMS"],
+            "parameters": [
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/SMSVerification"
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/smsverify/check": {
+        "post": {
+            "description": "Smsni tekshirish",
+            "tags": ["SMS"],
+            "parameters": [
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/SMSVerification_Check"
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        }
+    }
+
+}

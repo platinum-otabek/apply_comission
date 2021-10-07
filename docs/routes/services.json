@@ -1,0 +1,128 @@
+{
+    "/api/services/": {
+        "get": {
+            "description": "Barcha xizmatlarni olish.",
+            "tags": [
+                "Services"
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "post": {
+            "description": "Xizmat qo'shish.",
+            "tags": [
+                "Services"
+            ],
+            "parameters": [
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/ServiceCreate"
+                    }
+                }
+            ],
+            "responses": {
+                "201": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/services/{id}": {
+        "get": {
+            "description": "Xizmatni olish",
+            "tags": [
+                "Services"
+            ],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Xizmat IDsi",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "patch": {
+            "description": "Xizmat ma'lumotlarini o'zgartirish",
+            "tags": [
+                "Services"
+            ],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Service IDsi",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/ServiceUpdate"
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "delete": {
+            "description": "Xizmatni o'chirish",
+            "tags": [
+                "Services"
+            ],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Xizmat IDsi",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "204": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/services/lang/{lang}": {
+        "get": {
+            "description": "Barcha xizmatlarni olish(lang).",
+            "tags": [
+                "Services"
+            ],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "Service tili",
+                    "description": "Service tili",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        }
+    }
+}

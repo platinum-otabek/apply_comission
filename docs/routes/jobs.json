@@ -1,0 +1,117 @@
+{
+    "/api/jobs/": {
+        "post": {
+            "description": "Kasb qo'shish.",
+            "tags": [
+                "Jobs"
+            ],
+            "parameters": [
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/JobCreate"
+                    }
+                }
+            ],
+            "responses": {
+                "201": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/jobs/{id}": {
+        "get": {
+            "description": "Kasb olish",
+            "tags": [
+                "Jobs"
+            ],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Kasb IDsi",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "patch": {
+            "description": "Kasb ma'lumotlarini o'zgartirish",
+            "tags": [
+                "Jobs"
+            ],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Kasb IDsi",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/JobUpdate"
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "delete": {
+            "description": "Kasbni o'chirish",
+            "tags": [
+                "Jobs"
+            ],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Kasb IDsi",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "204": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/jobs/lang/{lang}": {
+        "get": {
+            "description": "Categoryni olish",
+            "tags": [
+                "Jobs"
+            ],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "lang",
+                    "description": "Job tili bo`yicha",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        }
+    }
+}

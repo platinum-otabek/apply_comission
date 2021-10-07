@@ -1,0 +1,107 @@
+{
+  "OrderCreate": {
+    "properties": {
+      "user_id": {
+        "type": "string",
+        "required": true
+      },
+      "client_id": {
+        "type": "string",
+        "required": true
+      },
+      "job_id": {
+        "type": "string",
+        "required": true
+      },
+      "images": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "price": {
+        "type": "number"
+      },
+      "desc": {
+        "type": "string"
+      },
+      "full_desc": {
+        "type": "string"
+      },
+      "work_count": {
+        "type": "number"
+      },
+      "latlng": {
+        "type": "string"
+      }
+    }
+  },
+  "OrderUpdate": {
+    "properties": {
+      "user_id": {
+        "type": "string",
+        "required": true
+      },
+      "client_id": {
+        "type": "string",
+        "required": true
+      },
+      "job_id": {
+        "type": "string",
+        "required": true
+      },
+      "images": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "price": {
+        "type": "number"
+      },
+      "desc": {
+        "type": "string"
+      },
+      "full_desc": {
+        "type": "string"
+      },
+      "work_count": {
+        "type": "number"
+      },
+      "latlng": {
+        "type": "string"
+      },
+      "isFinish": {
+        "type": "boolean"
+      },
+      "status": {
+        "type": "string",
+        "enum": ["stable","success","cancel_client","cancel_user"]
+      }
+    }
+  },
+  "OrderGetUserOrClient": {
+    "properties": {
+      "_id": {
+        "type": "string",
+        "required": true
+      },
+      "type": {
+        "type": "string",
+        "enum": [
+          "user",
+          "client"
+        ]
+      }
+    }
+  },
+  "OrderGetByStatus": {
+    "properties": {
+      "status": {
+        "type": "string",
+        "enum": ["stable","success","cancel_client","cancel_user","cancel_all"],
+        "required": "true"
+      }
+    }
+  }
+}

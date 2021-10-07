@@ -1,0 +1,225 @@
+{
+    "/api/testusers/signup": {
+        "post": {
+            "description": "Tizimda ro'yxatdan o'tish",
+            "tags": [
+                "TestUsers"
+            ],
+            "parameters": [
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/Signup"
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/testusers/login": {
+        "post": {
+            "description": "Tizimda kirish",
+            "tags": [
+                "TestUsers"
+            ],
+            "parameters": [
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/Login"
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/testusers/free": {
+        "post": {
+            "description": "Tizimda kirish",
+            "tags": [
+                "TestUsers"
+            ],
+            "parameters": [
+                {
+                    "in": "header",
+                    "type": "string",
+                    "name": "Authorization",
+                    "description": "Token",
+                    "required": true
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/testusers/filter": {
+        "get": {
+            "description": "Xizmat foydalanuvchilarini olish.",
+            "tags": [
+                "TestUsers"
+            ],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Xizmat IDsi",
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/testusers/addservice": {
+        "post": {
+            "description": "Tizimda kirish",
+            "tags": [
+                "TestUsers"
+            ],
+            "parameters": [
+                {
+                    "in": "header",
+                    "type": "string",
+                    "name": "Authorization",
+                    "description": "Token",
+                    "required": true
+                },
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/AddService"
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/testusers/": {
+        "get": {
+            "description": "Barcha foydalanuvchilarni olish.",
+            "tags": [
+                "TestUsers"
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "post": {
+            "description": "Foydalanuvchi qo'shish.",
+            "tags": [
+                "TestUsers"
+            ],
+            "parameters": [
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/UserCreate"
+                    }
+                }
+            ],
+            "responses": {
+                "201": {
+                    "description": "OK"
+                }
+            }
+        },
+        "patch": {
+            "description": "Foydalanuvchi ma'lumotlarini o'zgartirish",
+            "tags": [
+                "TestUsers"
+            ],
+            "parameters": [
+                {
+                    "in": "header",
+                    "type": "string",
+                    "name": "Authorization",
+                    "description": "Token",
+                    "required": true
+                },
+                {
+                    "in": "body",
+                    "name": "Body",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/UserUpdate"
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        },
+        "delete": {
+            "description": "Foydalanuvchini ochirish",
+            "tags": [
+                "TestUsers"
+            ],
+            "parameters": [
+                {
+                    "in": "header",
+                    "type": "string",
+                    "name": "Authorization",
+                    "description": "Token",
+                    "required": true
+                }
+            ],
+            "responses": {
+                "204": {
+                    "description": "OK"
+                }
+            }
+        }
+    },
+    "/api/testusers/{id}": {
+        "get": {
+            "description": "Foydalanuvchini olish",
+            "tags": [
+                "TestUsers"
+            ],
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Foydalanuvchi IDsi",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "OK"
+                }
+            }
+        }
+    }
+}
