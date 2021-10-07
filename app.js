@@ -6,7 +6,6 @@ const globalErrorHandler = require('./controllers/error');
 const AppError = require('./utils/appError');
 const indexRouter = require('./routes');
 const path = require('path');
-const bodyParser = require('body-parser')
 const swagger = require('swagger-ui-express');
 const swaggerDocs = require('./docs');
 // Initialize express app
