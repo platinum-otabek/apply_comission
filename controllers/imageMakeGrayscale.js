@@ -37,13 +37,16 @@ exports.create = catchAsync(async (req, res, next) => {
                             err: err
                         })
                     }
-                    return res.status(200).json({
-                        result_message: 'success',
-                        image_res_width: dimensions.width,
-                        image_res_height: dimensions.height,
-                        image_srv_path: `${process.env.GRAY_IMAGE_PATH}/${fileName}`,
-                        image_http_path: `${process.env.HTTP_LOCATION}/${process.env.GRAY_IMAGE_PATH}/${fileName}`,
-                    })
+                    else {
+                        return res.status(200).json({
+                            result_message: 'success',
+                            image_res_width: dimensions.width,
+                            image_res_height: dimensions.height,
+                            image_srv_path: `${process.env.GRAY_IMAGE_PATH}/${fileName}`,
+                            image_http_path: `${process.env.HTTP_LOCATION}/${process.env.GRAY_IMAGE_PATH}/${fileName}`,
+                        })
+                    }
+
                 })
             }
         });
