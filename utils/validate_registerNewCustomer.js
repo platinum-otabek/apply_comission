@@ -1,5 +1,5 @@
 const {check} = require('express-validator')
-
+ 
 exports.checkBodyNum_Name_resident = (() => {
     return [
         check('phone_number')
