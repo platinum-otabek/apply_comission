@@ -6,6 +6,7 @@ const globalErrorHandler = require('./controllers/error');
 const AppError = require('./utils/appError');
 const indexRouter = require('./routes');
 const path = require('path');
+const bodyParser = require('body-parser')
 const swagger = require('swagger-ui-express');
 const swaggerDocs = require('./docs');
 // Initialize express app
@@ -21,7 +22,7 @@ app.use(cors());
 app.use('/docs', swagger.serve, swagger.setup(swaggerDocs));
 // Routes
 app.use('/uploads', express.static('uploads'));
-// app.use(bodyParser.json({ limit: '50Mb' }));
+app.use(bodyParser.json({ limit: '50Mb' }));
 indexRouter(app);
 
 // 404 Error
