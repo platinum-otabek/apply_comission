@@ -1,3 +1,22 @@
 [
-
+    {
+        "name": "Users",
+        "description": "Foydalanuvchilar endpointlari."
+    },
+    {
+        "name": "Jobs",
+        "description": "kasblar endpointlari."
+    },
+    {
+        "name": "Services",
+        "description": "Xizmatlar endpointlari."
+    },
+    {
+        "name": "Clients",
+        "description": "Ish beruvchilar endpointlari."
+    },
+    {
+        "name": "Categoryjobs",
+        "description": "Barcha kategoriyalar endpointlari"
+    }
 ]

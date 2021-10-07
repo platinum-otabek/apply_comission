@@ -1,0 +1,32 @@
+{
+  "RegisterNewCustomer": {
+    "properties": {
+       "full_name": {
+        "type": "string"
+      },
+      "phone_number": {
+        "type": "string",
+        "required": true
+      },
+      "is_resident": {
+        "type": "boolean",
+        "required": true
+      }
+    }
+  },
+  "GetCustomerImage": {
+    "properties": {
+
+    }
+  },
+  "ImageMakeGrayscale": {
+    "properties": {
+
+      "image_srv_path": {
+        "type": "string",
+        "required": true
+      }
+
+    }
+  }
+}

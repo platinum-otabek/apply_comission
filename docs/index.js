@@ -1,18 +1,17 @@
 const main = require('./swagger.json');
 const tags = require('./tags.json');
 
-const registerNewCustomerRoutes = require('./routes/registerNewCustomer.json');
+const customerRoutes = require('./routes/Customer.json');
 
+const customerModels = require('./models/Customer.json');
 
-
-const registerNewCustomerModels = require('./models/registerNewCustomer.json');
 
 const paths = {
-    ...registerNewCustomerRoutes
+    ...customerRoutes,
 };
 
 const definitions = {
-    ...registerNewCustomerModels
+    ...customerModels,
 };
 
 module.exports = {

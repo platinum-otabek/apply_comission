@@ -29,7 +29,6 @@ exports.create = catchAsync(async (req, res, next) => {
                 await image
                     .greyscale() // set greyscale
                     .write(dir); // save
-                console.log(`uploads/grayscale_images/${fileName}`)
                 sizeOf(`./uploads/grayscale_images/${fileName}`, (err, dimensions) => {
                     if (err) {
                         console.log(err);
