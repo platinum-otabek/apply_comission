@@ -2,9 +2,7 @@ name: apply comissions
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ master ]
+    branches: main
 
 jobs:
   build:
