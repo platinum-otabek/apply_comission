@@ -18,7 +18,7 @@ describe('Register New Customer', () => {
             } catch (error) {
                 let errors_body = error.response.data.errors
                 assert.equal(error.response.status, 400);
-                assert.equal(errors_body.length, 5)
+                assert.equal(errors_body.length, 4)
                 assert.equal(typeof errors_body, 'object')
                 assert.equal(errors_body[0].msg, 'phone_number is required')
                 assert.equal(errors_body[2].msg, 'is_resident field is required')
@@ -89,7 +89,6 @@ describe('Register New Customer', () => {
                         "full_name": "John Mike"
                     }
                 });
-                console.log(res.status)
                 assert.equal(res.status, 200);
                 assert.equal(res.data.success, true)
                 assert.notEqual(res.data.user_token, '')
@@ -183,7 +182,6 @@ describe('Image Gray Scale', () => {
                     "user_token": "asdqw/123.sdqweq"
                 }
             });
-            console.log(res)
         } catch (error) {
             let errors_body = error.response.data
             assert.equal(errors_body.err.syscall, 'open')
