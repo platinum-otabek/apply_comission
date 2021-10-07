@@ -12,7 +12,7 @@ describe('Register New Customer', () => {
             try {
                 await axios({
                     method: 'POST',
-                    url: `${process.env.HTTP_LOCATION}/registerNewCustomer`,
+                    url: `${process.env.HTTP_LOCATION || "http://localhost:4000"}/registerNewCustomer`,
                     data: {}
                 });
             } catch (error) {
@@ -32,7 +32,7 @@ describe('Register New Customer', () => {
             try {
                 await axios({
                     method: 'POST',
-                    url: `${process.env.HTTP_LOCATION}/registerNewCustomer`,
+                    url: `${process.env.HTTP_LOCATION|| "http://localhost:4000"}/registerNewCustomer`,
                     data: {
                         "phone_number": "e"
                     }
@@ -47,7 +47,7 @@ describe('Register New Customer', () => {
             try {
                 await axios({
                     method: 'POST',
-                    url: `${process.env.HTTP_LOCATION}/registerNewCustomer`,
+                    url: `${process.env.HTTP_LOCATION|| "http://localhost:4000"}/registerNewCustomer`,
                     data: {
                         "is_resident": "e"
                     }
@@ -65,7 +65,7 @@ describe('Register New Customer', () => {
             try {
                 await axios({
                     method: 'POST',
-                    url: `${process.env.HTTP_LOCATION}/registerNewCustomer`,
+                    url: `${process.env.HTTP_LOCATION|| "http://localhost:4000"}/registerNewCustomer`,
                     data: {
                         "full_name": "e"
                     }
@@ -82,7 +82,7 @@ describe('Register New Customer', () => {
             try {
                 let res = await axios({
                     method: 'POST',
-                    url: `${process.env.HTTP_LOCATION}/registerNewCustomer`,
+                    url: `${process.env.HTTP_LOCATION|| "http://localhost:4000"}/registerNewCustomer`,
                     data: {
                         "phone_number": "+998941234567",
                         "is_resident": 1,
@@ -108,7 +108,7 @@ describe('Get Customer image', () => {
             try {
                 await axios({
                     method: 'POST',
-                    url: `${process.env.HTTP_LOCATION}/getCustomerImage`,
+                    url: `${process.env.HTTP_LOCATION|| "http://localhost:4000"}/getCustomerImage`,
                     data: {}
                 });
             } catch (error) {
@@ -159,7 +159,7 @@ describe('Image Gray Scale', () => {
             try {
                 await axios({
                     method: 'POST',
-                    url: `${process.env.HTTP_LOCATION}/imageMakeGrayscale`,
+                    url: `${process.env.HTTP_LOCATION|| "http://localhost:4000"}/imageMakeGrayscale`,
                     data: {}
                 });
             } catch (error) {
@@ -174,7 +174,7 @@ describe('Image Gray Scale', () => {
         try {
             let res = await axios({
                 method: 'POST',
-                url: `${process.env.HTTP_LOCATION}/imageMakeGrayscale`,
+                url: `${process.env.HTTP_LOCATION|| "http://localhost:4000"}/imageMakeGrayscale`,
                 data: {
                     "image_srv_path": "test/images/test.pn"
                 },
@@ -192,7 +192,7 @@ describe('Image Gray Scale', () => {
         try {
             let res = await axios({
                 method: 'POST',
-                url: `${process.env.HTTP_LOCATION}/imageMakeGrayscale`,
+                url: `${process.env.HTTP_LOCATION|| "http://localhost:4000"}/imageMakeGrayscale`,
                 data: {
                     "image_srv_path": "test/images/test.png"
                 },
