@@ -5,6 +5,9 @@ const {validationResult} = require('express-validator')
 require('dotenv').config();
 const sizeOf = require("image-size");
 require('dotenv').config();
+const fs = require('fs'),
+    path = require('path');   
+    
 
 
 exports.create = catchAsync(async (req, res, next) => {
@@ -15,8 +18,9 @@ exports.create = catchAsync(async (req, res, next) => {
             errors: errors.array()
         });
     }
-    try {
-        Jimp.read(req.body.image_srv_path, async (err, image) => {
+    
+        // const filePath = path.join(__dirname, './uploads/image/1633666369923.png');
+        Jimp.read(`./${req.body.image_srv_path}`, async (err, image) => {
             if (err) {
                 res.status(400).json({
                     result_message: 'fail',
@@ -50,12 +54,10 @@ exports.create = catchAsync(async (req, res, next) => {
                 })
             }
         });
-    } catch (err) {
-        res.status(400).json({
-            result_message: 'fail',
-            err: err
-        })
-    }
+        
+
+        
+    
 
 });
 

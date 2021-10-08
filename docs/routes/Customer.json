@@ -58,7 +58,6 @@
         {
           "in": "header",
           "name": "user_token",
-          "description": "token",
           "required": true
         },
         {
