@@ -7,7 +7,7 @@ const AppError = require("./../utils/appError");
 const {validationResult} = require("express-validator");
 
 exports.create = catchAsync(async (req, res, next) => {
-    console.log(req.headers);
+    
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
         return res.status(400).json({
