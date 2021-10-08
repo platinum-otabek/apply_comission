@@ -4,8 +4,7 @@ exports.checkBodyImage_Token = (() => {
     return [
         header('user_token')
             .notEmpty()
-            .withMessage('user_token is required'),
-        check('image')
+            .withMessage('user_token is required')
     ]
 })
 

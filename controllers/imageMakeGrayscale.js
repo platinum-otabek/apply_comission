@@ -19,7 +19,6 @@ exports.create = catchAsync(async (req, res, next) => {
         });
     }
     
-        // const filePath = path.join(__dirname, './uploads/image/1633666369923.png');
         Jimp.read(`./${req.body.image_srv_path}`, async (err, image) => {
             if (err) {
                 res.status(400).json({
