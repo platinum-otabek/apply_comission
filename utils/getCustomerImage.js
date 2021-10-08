@@ -1,7 +1,10 @@
 const {check, header} = require('express-validator')
 
 exports.checkBodyImage_Token = function () {
-    return true
+    return [
+        header('user_token')
+            
+    ]
 }
 
 
