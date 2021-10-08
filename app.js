@@ -21,7 +21,9 @@ app.use(cors());
 app.use('/docs', swagger.serve, swagger.setup(swaggerDocs));
 // Routes
 app.use('/uploads', express.static('uploads'));
-app.use(bodyParser.json({ limit: '50Mb' }));
+
+
+app.use(bodyParser.raw({type: function(){return true;}, limit: '50mb'}));
 indexRouter(app);
 
 // 404 Error
