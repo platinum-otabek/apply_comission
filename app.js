@@ -23,7 +23,7 @@ app.use('/docs', swagger.serve, swagger.setup(swaggerDocs));
 app.use('/uploads', express.static('uploads'));
 
 
-app.use(bodyParser.raw({type: function(){return true;}, limit: '50mb'}));
+
 indexRouter(app);
 
 // 404 Error

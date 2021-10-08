@@ -10,18 +10,23 @@ exports.create = catchAsync(async (req, res, next) => {
     
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
+        
         return res.status(400).json({
             result_message: "fail",
             errors: errors.array()
         });
     }
     uploadImage(req, res, async (err) => {
+        
         if (err instanceof multer.MulterError) {
+            
             return res.status(400).json({
+                
                 result_message: 'fail',
                 err: err.message
             });
         } else if (err) {
+            
             return res.status(400).json({
                 result_message: 'fail',
                 err: err.message
@@ -29,10 +34,13 @@ exports.create = catchAsync(async (req, res, next) => {
         }
         // check image resolution 800X600
         else {
+           
             try {
+                
                 const dimensions = sizeOf(req.file.path);
                 if (dimensions.width > 800 || dimensions.height > 600) {
-                    await deleteFile(req.file.path)
+                    console.log('error nor');
+                    await deleteFile(req.file.path);
                     return res.status(400).json({
                         result_message: 'fail',
                         message: "Picture resolution must be lower than 800 by 600 px"
