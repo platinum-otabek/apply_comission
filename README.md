@@ -28,7 +28,7 @@ You should configure web server, you can use nginx,  it is much more easy. It re
 server you use, just do not forget to add two endpoints for static files:
 
 + `/uploads/image` - this is for all images
-+ `/uploads/gray_scale` - this is for all gray scale images
++ `/uploads/grayscale_images` - this is for all gray scale images
 
 
 ## URLs
