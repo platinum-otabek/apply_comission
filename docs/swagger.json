@@ -2,8 +2,8 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "MARDEX Docs",
-    "description": "MARDEX Documentatsiyasi"
+    "title": "Apply  Docs",
+    "description": "Apply Documentation"
   },
   "host": "localhost:4000",
   "schemes": [
